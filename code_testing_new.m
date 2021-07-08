@@ -40,8 +40,8 @@ totalNumberOfPixels = sum(tbl.PixelCount);
 frequency = tbl.PixelCount / totalNumberOfPixels;
 classWeights = 1./frequency;
 
-numFilters = 64; % explanation
-filterSize = 3; % explanation
+numFilters = 64; % Number of filters, specified as a positive integer. This number corresponds to the number of neurons in the convolutional layer that connect to the same region in the input. This parameter determines the number of channels (feature maps) in the output of the convolutional layer.
+filterSize = 3; % Height and width of the filters, specified as a vector [h w] of two positive integers, where h is the height and w is the width. FilterSize defines the size of the local regions to which the neurons connect in the input.
 numClasses = length(pixelLabelIds);
 layers = [
        imageInputLayer([128 128 1],'Name','ImageInputLayer')
